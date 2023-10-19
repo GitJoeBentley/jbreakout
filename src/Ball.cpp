@@ -13,7 +13,6 @@ Ball::Ball(const std::string& filename, sf::Vector2f pos, Direction dir, float a
     angle = static_cast<float>(rand()%80-40);
     // angle = 0.5;  // for debugging
     speed *= 1.25  ;
-
 }
 
 Ball::~Ball()

@@ -12,7 +12,7 @@ Ball::Ball(const std::string& filename, sf::Vector2f pos, Direction dir, float a
     ball.setPosition(pos);
     angle = static_cast<float>(rand()%80-40);
     // angle = 0.5;  // for debugging
-    speed *= 1.25  ;
+    //speed *= 1.25  ;
 }
 
 Ball::~Ball()
@@ -24,32 +24,14 @@ void Ball::move()
 
     if (direction == Up)
     {
-        if (angle > 0.0f)
-        {
-            position.x = position.x + speed * std::sin(RPD*angle);
-            position.y = position.y - speed * std::cos(RPD*angle);
-        }
-        else
-        {
-            position.x = position.x + speed * std::sin(RPD*angle);
-            position.y = position.y - speed * std::cos(RPD*angle);
-        }
-        // std::cout << std::sin(RPD*angle) << "   " << std::cos(RPD*angle) << "   " <<  position.x << ',' << position.y << std::endl;
+        position.x = position.x + speed * std::sin(RPD*angle);
+        position.y = position.y - speed * std::cos(RPD*angle);
 
     }
     else  // ball direction is down
     {
-        if (angle > 0.0f)
-        {
-            position.x = position.x + speed * std::sin(RPD*angle);
-            position.y = position.y + speed * std::cos(RPD*angle);
-        }
-        else
-        {
-            position.x = position.x + speed * std::sin(RPD*angle);
-            position.y = position.y + speed * std::cos(RPD*angle);
-        }
-        // std::cout << std::sin(RPD*angle) << "   " << std::cos(RPD*angle) << "   " <<  position.x << ',' << position.y << std::endl;
+        position.x = position.x + speed * std::sin(RPD*angle);
+        position.y = position.y + speed * std::cos(RPD*angle);
     }
     ball.setPosition(position);
 }

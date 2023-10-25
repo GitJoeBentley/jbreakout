@@ -2,7 +2,7 @@
 #include "Paddle.h"
 
 Paddle::Paddle(const std::string& filename, sf::Vector2f pos)
-    : position(pos), paddleSpeed(8.0f)
+    : position(pos), paddleSpeed(9.0f)
 {
     texture.loadFromFile(filename);
     paddle.setTexture(texture);
